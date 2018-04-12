@@ -14,8 +14,9 @@ s = URL(
     database=CONFIG['db']['database']
 )
 
-engine = create_engine(s)
+engine = create_engine(s, echo=int(CONFIG['db']['echo']))
 
 DBSession = sessionmaker(bind=engine)
 
+glo.set_value('ENGINE', engine)
 glo.set_value('DB', DBSession())

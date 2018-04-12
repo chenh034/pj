@@ -1,4 +1,4 @@
-class Model:
+class Model(object):
     test = ''
 
     def to_dict(self):

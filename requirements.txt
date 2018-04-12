@@ -1,3 +1,5 @@
 flask
 gevent
 sqlalchemy
+webob
+configparser
